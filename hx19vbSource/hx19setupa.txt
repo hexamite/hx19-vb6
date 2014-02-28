@@ -1,0 +1,31 @@
+M1&s0
+R51&m3 q1 f2 [ok]
+R54&m3 q2 f2 [ok]
+R45&m3 q3 f2 [ok]
+R46&m3 q4 f2 [ok]
+R47&m3 q5 f2 [ok]
+R48&m3 q6 f2 [ok]
+R49&m3 q7 f2 [ok]
+T20&f2 [ok]
+T21&f2 [ok]
+M1& s20-21 f2
+
+in case you have only one hx19 monitor and many receivers you have to put the receivers into a proper
+firing sequence and set 4s/s mode f2
+Click the sync button and make sure all the tags are synchronized and strobing (see blue led) then broadcast this file
+
+example: if you have more than 1 hx19ms then the following may be proper, given that the default channel is 123
+then 
+M&s0
+M2& r119
+R50& t119 [ok]
+R51& t119 [ok]
+R52& t119 [ok]
+R53& t119 [ok]
+M1& s20-21 f2 $
+
+M1 is going to be master synchronizer, while M2 connected to another USB port is monitoring receivers
+R50, R51, R52 and R53 on channel 119 in this case 8s/s for the whole system of up to 2x5 receivers is OK.
+
+
+

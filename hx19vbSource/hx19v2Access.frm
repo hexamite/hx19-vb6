@@ -2,10 +2,10 @@ VERSION 5.00
 Object = "{648A5603-2C6E-101B-82B6-000000000014}#1.1#0"; "MSCOMM32.OCX"
 Begin VB.Form Form1 
    Caption         =   "hx19access"
-   ClientHeight    =   7485
+   ClientHeight    =   7455
    ClientLeft      =   60
    ClientTop       =   345
-   ClientWidth     =   6540
+   ClientWidth     =   14190
    BeginProperty Font 
       Name            =   "MS Serif"
       Size            =   9.75
@@ -15,10 +15,10 @@ Begin VB.Form Form1
       Italic          =   0   'False
       Strikethrough   =   0   'False
    EndProperty
-   Icon            =   "hx19Access.frx":0000
+   Icon            =   "hx19v2Access.frx":0000
    LinkTopic       =   "Form1"
-   ScaleHeight     =   7485
-   ScaleWidth      =   6540
+   ScaleHeight     =   7455
+   ScaleWidth      =   14190
    StartUpPosition =   3  'Windows Default
    Begin VB.CheckBox Check3 
       Caption         =   "X"
@@ -40,7 +40,7 @@ Begin VB.Form Form1
       Caption         =   "Broadcast hx19setup.txt"
       BeginProperty Font 
          Name            =   "MS Serif"
-         Size            =   9.75
+         Size            =   8.25
          Charset         =   0
          Weight          =   700
          Underline       =   0   'False
@@ -145,7 +145,7 @@ Begin VB.Form Form1
       MultiLine       =   -1  'True
       TabIndex        =   0
       Top             =   1320
-      Width           =   3135
+      Width           =   8175
    End
    Begin MSCommLib.MSComm MSComm1 
       Left            =   5040
@@ -227,7 +227,7 @@ Text6 = ""
 
 'The following code segment is the heart of the interface to the hx19ms
 
-    Form1.MSComm1.CommPort = Port               'this port number must corrispond to the hx19ms usb port
+    Form1.MSComm1.CommPort = Port       'this port number must corrispond to the hx19ms usb port
     Form1.MSComm1.Settings = "256000,N,8,1" '256Kbaud, no parity, 8bit interchange and 1 stop bit
     Form1.MSComm1.PortOpen = True
     Form1.MSComm1.InputLen = 1                  'get serial characters one by one
@@ -236,10 +236,10 @@ Text6 = ""
     
 ticnt = 0
  Do
-    Do:                                         'loop until there's a character in input buffer
+    Do:                                                 'loop until there's a character in input buffer
      DoEvents
     Loop While Form1.MSComm1.InBufferCount < 1
-    'using MSComm1 control component supplied with visual basic 6
+                    'using MSComm1 control component supplied with visual basic 6
     cc = Form1.MSComm1.Input   'input a character from hx19ms Mscomm1
       
      If cc = Chr(13) Then                           'if it is a data delimiter (carriage return) then display line

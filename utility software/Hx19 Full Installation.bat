@@ -28,6 +28,10 @@ cd..
 
 copy *.txt c:\Progra~1\HX19v2\*.txt
 
+md c:\Progra~1\HX19v2\dataFiles
+
 @echo *** Installation Finished ***
+
+
 
 pause

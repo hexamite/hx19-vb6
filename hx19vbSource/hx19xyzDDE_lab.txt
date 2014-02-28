@@ -1,0 +1,13 @@
+5	"select com port 1 thru 15, verify it is either free or shareable through control panel"
+0.6	"alpha value 0=< alpha <=1 (see double expotential smoothing wikipedia)"
+0.1	"beta  value 0=< beta  <=1 (see double expotential smoothing wikipedia)"
+4	"computes position only if this number or more receivers are detected, select a value from 1 to 20"
+500	"xy viewing plane, X-left top corner"
+500	"xy viewing plane, Y-left top corner"
+2500	"xy viewing plane, X-right bottom corner"
+2500	"xy viewing plane, Y-right bottom corner"
+-100	"xz viewing plane, Z-left top corner"
+4000	"xz viewing plane, Z-right bottom corner"
+0	"if 1, Forecast is logged i.e. extra point for every measurement (alpha and beta same for all axis) 
+
+"Don't remove the comments, just change the values"

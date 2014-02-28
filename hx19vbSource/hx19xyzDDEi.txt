@@ -1,4 +1,6 @@
-3	"select com port 1 thru 15, verify it is either free or shareable through control panel"
+5	"select com port 1 thru 15, verify it is either free or shareable through control panel"
+0.6	"alpha value 0=< alpha <=1 (see double expotential smoothing wikipedia)"
+0.1	"beta  value 0=< beta  <=1 (see double expotential smoothing wikipedia)"
 3	"computes position only if this number or more receivers are detected, select a value from 1 to 20"
 8	"computes position using no more than the number specified here. select a value from 1 to 20"
 800	"xy viewing plane, X-left top corner"
@@ -6,8 +8,6 @@
 2200	"xy viewing plane, X-right bottom corner"
 2200	"xy viewing plane, Y-right bottom corner"
 0	"xz viewing plane, Z-left top corner"
-5000	"xz viewing plane, Z-right bottom corner"
-12	"running average max 64, if less than 2 no running average is computed"
-100	"Tolerance (mm): if one out of 3 previous points is outside tolerance it isn't displayed, and is excluded from running average"
+9000	"xz viewing plane, Z-right bottom corner"
 
 "Don't remove the comments, just change the values"

@@ -1,5 +1,5 @@
 REBOL[MY TEST]
-System/ports/serial: [ com5 ] ;if using linux this line is slightly different
+System/ports/serial: [ com3 ] ;if using linux this line is slightly different
 ser: open/direct/no-wait serial://port1/250000/none/8/1 
 ser/rts-cts: false
 update ser

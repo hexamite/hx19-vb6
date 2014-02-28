@@ -1,7 +1,14 @@
-R70&m3 q1 [aok] t119
-R71&m3 q2 [bok] t119
-R72&m3 q3 [cok] t119
-R73&m3 q4 [dok] t119
-!&f2
+M2&s0
+R51&m3 q1 f2 [ok]
+R54&m3 q2 f2 [ok]
+R45&m3 q3 f2 [ok]
+R46&m3 q4 f2 [ok]
+R47&m3 q5 f2 [ok]
+R48&m3 q6 f2 [ok]
+R49&m3 q7 f2 [ok]
+T20&f2 [ok]
+T21&f2 [ok]
+M2&q0:20 21 s2 f2
 
-scans tag ?0 and ?1 (20 and 21)
+Click the sync button and make sure all the tags are synchronized and strobing (see blue led) then broadcast this file
+

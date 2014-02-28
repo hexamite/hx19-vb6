@@ -1,5 +1,5 @@
 REBOL[MY TEST]
-System/ports/serial: [ com5 ] ;if using linux this line is slightly different
+System/ports/serial: [ com3 ] ;if using linux this line is slightly different
 ser: open/direct/no-wait serial://port1/250000/none/8/1 
 ser/rts-cts: false
 update ser
@@ -7,6 +7,7 @@ buffer: make string! 1
 logFile: "Hx19log.txt"
 xdata: array/initial 6 0
 bb: 0 bc: 0 tt: "" kt: "" nm: 1 kk: "" bd: 0
+zz: -30
 ;***************************************** CONDITIONS ********************************
 ;This program utilizes equations found at www.hexamite.com/hx19posb.htm. For this 
 ;set of relationship to work, line distance from first receiver to the second presents 
@@ -90,13 +91,18 @@ until 	 [
      clear kk
     ]
     [
+;print ["tag" kt " R1:" xdata/1 " R2:" xdata/2 " R3:" xdata/3] 
+;round(square-root zz)]]
       x0: (xdata/1) * (xdata/1)
       x1: (xdata/2) * (xdata/2)
       x2: (xdata/3) * (xdata/3)		;tag to receiver distance array
       xx: ((x0 - x1) + 1000000) / 2000
       yy: ((x0 - x2) + 1000000) / 2000  ;find these equations explained on the hexamite website
       zz: (x0 - (xx * xx) - (yy * yy))
-     if zz > 0 and bd < 1 [print ["tag" kt " X:" round(xx) " Y:" round(yy) " Z:" round(square-root zz)]]
+      if bd = 0 
+	[
+     	 if zz > 2 [print ["tag" kt " X:" round(xx) " Y:" round(yy) " Z:" round(square-root zz)]]
+	]
       nm: 1
     ]
     if bc > 0 [append log tt]

@@ -1,0 +1,31 @@
+M&s0
+M1& r2
+R50& t2r2 [ok]
+R51& t2r2 [ok]
+R52& t2r2 [ok]
+R53& t2r2 [ok]
+T20& t2r2 [ok]
+T21& t2r2 [ok]
+M1& s20-21 t2 $
+
+In the above the system is RF transmitting and receiving on channel 2
+Make sure the tags are strobing when you send this setup
+
+M&s0
+M1& r2 ee
+R50& t2r2 ee [ok]
+R51& t2r2 ee [ok]
+R52& t2r2 ee [ok]
+R53& t2r2 ee [ok]
+T20& t2r2 ee [ok]
+T21& t2r2 ee [ok]
+M1& s20-21 t2 ee $
+ 
+in the above channel 2 RF communication has been burned into flash, and is reaffirmed on system boot up.
+keep in mind that it is always dangerous to be making settings permanent unless one knows what he is doing.
+
+
+The hx19 access program broadcasts this setup file to the whole system, make sure all the devices are in range.
+
+
+
