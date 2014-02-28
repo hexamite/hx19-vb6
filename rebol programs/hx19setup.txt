@@ -1,0 +1,12 @@
+R40&m3 q1 f1 [R40_ok]
+R41&m3 q2 f1 [R41_ok]
+R42&m3 q3 f1 [R42_ok]
+R43&m3 q4 f1 [R43_ok]
+T21&m7 f1 [T21_ok]
+M1&f1 q0:20 21 22   s3
+
+M1&m0
+
+At 8s/s and 4s/s the device q order must start from 5 and up to 30 or 90
+the above sets mode.1 bit, and sets rate at 8s/s
+
