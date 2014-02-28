@@ -1,0 +1,13 @@
+"M1&m9r7p3"
+"R&m130t7"
+5
+100
+
+Line1. "M1&m9r7p3$" Setup string for the hx19ms. The configuration above sets hx19ms into a polling mode, and forces it to receive on channel 7, finally maximum power is selected. Although full operation is possible on a single, in this example channel 7 has been selected to carry the poll traffic.
+
+Line2. "R&m130t7" This forces the receivers to send the polled string on channel 7, and since 128 has been added to the mode value, the receiver places its results in on an internal round buffer rather than emitting when result is available.
+
+Line3. This line tells the program on which port it can find the hx19 usb data (stream).
+
+Line4. This line holds the interval in terms 10 milliseconds, i.e. 8*10=80mS.
+

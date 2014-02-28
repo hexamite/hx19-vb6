@@ -1,0 +1,1 @@
+You need to download the rebol viewer for free from the rebol website, www.rebol.com, please follow the instructions and note that you may need java installed on your computer before running the rebol facility. Once set up double click on hx19demo.r or hx19xyzV2.r

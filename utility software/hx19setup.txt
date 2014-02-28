@@ -1,0 +1,7 @@
+R70&m3 q1 [aok] t119
+R71&m3 q2 [bok] t119
+R72&m3 q3 [cok] t119
+R73&m3 q4 [dok] t119
+!&f2
+
+scans tag ?0 and ?1 (20 and 21)
